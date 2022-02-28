@@ -1,0 +1,8 @@
+{
+  "name": "Analise Carmica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "1ace062f"
+}
