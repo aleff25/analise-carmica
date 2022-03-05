@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-row class="ion-align-items-center">
+      <ion-title> Análise cármica </ion-title>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-align-items-center">
+        <ion-list lines="full" class="ion-no-margin">
+          <ion-item>
+            <ion-label position="stacked">Nome completo</ion-label>
+            <ion-input
+              autofocus
+              required
+              clearInput
+              [(ngModel)]="nomeCompleto"
+              placeholder="Digite o nome completo."
+            >
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              [value]="dataNascimento"
+              placeholder="Digite a data de nascimento."
+            >
+            </ion-input>
+            <ion-button
+              fill="clear"
+              id="open-date-input-2"
+            >
+              <ion-icon icon="calendar"></ion-icon>
+            </ion-button>
+            <ion-popover
+              trigger="open-date-input-2"
+              [dismissOnSelect]="true"
+              show-backdrop="false"
+            >
+              <ng-template>
+                <ion-datetime
+                  #popoverDatetime2
+                  presentation="date"
+                  (ionChange)="dataNascimento = formatarData(popoverDatetime2.value)"
+                ></ion-datetime>
+              </ng-template>
+            </ion-popover>
+          </ion-item>
+        </ion-list>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+        <ion-button
+          expand="full"
+          (click)="buscar()"
+        >Confirmar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { format, parseISO } from 'date-fns';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,22 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  nomeCompleto = '';
+  dataNascimento: string;
+
+  constructor(private router: Router) {}
+
+  formatarData(value: string) {
+    return format(parseISO(value), 'dd/MM/yyyy');
+  }
+
+  buscar() {
+    this.router.navigate(['/tabs/arcanos'], {
+      state: {
+        nomeCompleto: this.nomeCompleto,
+        dataNascimento: this.dataNascimento
+      }
+    });
+  }
 
 }
