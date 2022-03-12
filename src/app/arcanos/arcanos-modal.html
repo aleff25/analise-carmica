@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-row class="ion-align-items-center">
+      <ion-title> {{ title }} </ion-title>
+    </ion-row>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        {{ text }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

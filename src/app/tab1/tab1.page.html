@@ -23,27 +23,18 @@
             </ion-input>
           </ion-item>
           <ion-item>
+            <ion-label>Data de nascimento</ion-label>
             <ion-input
-              [value]="dataNascimento"
-              placeholder="Digite a data de nascimento."
-            >
-            </ion-input>
-            <ion-button
-              fill="clear"
-              id="open-date-input-2"
-            >
-              <ion-icon icon="calendar"></ion-icon>
-            </ion-button>
-            <ion-popover
-              trigger="open-date-input-2"
-              [dismissOnSelect]="true"
-              show-backdrop="false"
-            >
+              value="{{ dataNascimento | date: 'dd/MM/yyyy' }}"
+              id="date"
+              class="ion-text-end"
+            ></ion-input>
+            <ion-popover trigger="date" size="cover">
               <ng-template>
                 <ion-datetime
-                  #popoverDatetime2
                   presentation="date"
-                  (ionChange)="dataNascimento = formatarData(popoverDatetime2.value)"
+                  [(ngModel)]="dataNascimento"
+                  locale="pt-Br"
                 ></ion-datetime>
               </ng-template>
             </ion-popover>

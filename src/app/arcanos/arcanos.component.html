@@ -14,16 +14,75 @@
     <ion-row>
       <ion-col>
         <ion-text>
-          <h4><strong>Nome:</strong> Aleff Rodrigues Mendes de Oliveira</h4>
+          <h4><strong>Nome:</strong> {{ nome }}</h4>
         </ion-text>
-        <h4><strong>Data nascimento:</strong> 25/11/1994</h4>
+        <h4><strong>Data nascimento:</strong> {{ dataNascimento }}</h4>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-accordion-group>
+          <ion-accordion value="ar">
+            <ion-item slot="header" lines="inset">
+              <ion-label><strong>Arcanos</strong></ion-label>
+            </ion-item>
+
+            <ion-list slot="content">
+              <ion-item (click)="presentModal(analiseCarmica[0])" button>
+                <ion-label>{{ data[analiseCarmica[0]].title }}</ion-label>
+              </ion-item>
+              <ion-item *ngIf="analiseCarmica[1] > 0" (click)="presentModal(analiseCarmica[1])" button>
+                <ion-label>{{ data[analiseCarmica[1]].title  }}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-accordion>
+          <ion-accordion value="colors">
+            <ion-item slot="header">
+              <ion-label><strong>Ciclo cósmico</strong></ion-label>
+            </ion-item>
+
+            <ion-list slot="content">
+              <ion-item>
+                <ion-label>Idade: {{ cicloCosmico.idade }} anos</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Ciclo Sazonal: {{ cicloCosmico.cicloSazonal }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Ciclo Cósmico: {{ cicloCosmico.cicloCosmico }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Quantos Ciclos  já viveu?: {{ cicloCosmico.qtdCiclos }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Atual Ciclo Cósmico: Ciclo {{ cicloCosmico.cicloAtual }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Atual Estação Cósmica: {{ cicloCosmico.estacaoAtual }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Data inicial dessa Estação: {{ cicloCosmico.dataInicialEstacao | date: 'dd/MM/yyyy' }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Data final dessa Estação: {{ cicloCosmico.dataFinalEstacao | date: 'dd/MM/yyyy' }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Próxima Estação: {{ cicloCosmico.proximaEstacao }}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Data início próxima Estação: {{ cicloCosmico.dataInicioProximaEstacao | date: 'dd/MM/yyyy' }}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-accordion>
+        </ion-accordion-group>
       </ion-col>
     </ion-row>
     <ion-row class="ion-justify-content-center">
       <ion-col>
         <ion-button color="secondary">
           <div>
-            <label>10</label>
+            <label>{{ arcanos.mental }}</label>
             <br>
             <label class="wrap-text">Mental</label>
           </div>
@@ -32,44 +91,44 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.mental + arcanos.emocional }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.mental + arcanos.espiritual }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.mental + arcanos.racional }}</ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-button  color="secondary">
           <div>
-            <label>10</label>
+            <label>{{ arcanos.emocional }}</label>
             <br>
             <label class="wrap-text">Emocional</label>
           </div>
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.emocional + arcanos.espiritual }}</ion-button>
       </ion-col>
       <ion-col>
         <ion-button  color="secondary">
           <div>
-            <label>10</label>
+            <label>{{ arcanos.espiritual }}</label>
             <br>
             <label class="wrap-text">Espiritual</label>
           </div>
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.racional + arcanos.espiritual }}</ion-button>
       </ion-col>
       <ion-col>
         <ion-button  color="secondary">
           <div>
-            <label>10</label>
+            <label>{{ arcanos.racional }}</label>
             <br>
             <label class="wrap-text">Racional</label>
           </div>
@@ -78,20 +137,20 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.emocional + arcanos.tridimensional }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.tridimensional + arcanos.espiritual }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.tridimensional + arcanos.racional }}</ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-button  color="secondary">
           <div>
-            <label>10</label>
+            <label>{{ arcanos.tridimensional }}</label>
             <br>
             <label class="wrap-text">Tridimensional</label>
           </div>
@@ -100,20 +159,20 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.transpessoal + arcanos.emocional }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.transpessoal + arcanos.tridimensional }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button color="medium">20</ion-button>
+        <ion-button color="medium">{{ arcanos.transpessoal + arcanos.racional }}</ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-button  color="secondary">
           <div>
-            <label>10</label>
+            <label>{{ arcanos.transpessoal }}</label>
             <br>
             <label class="wrap-text">Transpessoal</label>
           </div>
