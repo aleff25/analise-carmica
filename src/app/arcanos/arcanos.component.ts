@@ -54,13 +54,12 @@ export class ArcanosComponent implements OnInit {
   constructor(private router: Router,
     private modalController: ModalController,
     private arcanoService: ArcanoService,
-    public routerOutlet: IonRouterOutlet) {
-      const {nomeCompleto, dataNascimento} = this.arcanoService.data;
-
-      this.buscar(nomeCompleto, dataNascimento);
-     }
+    public routerOutlet: IonRouterOutlet) {}
 
   ngOnInit() {
+    const {nomeCompleto, dataNascimento} = this.arcanoService.data;
+
+    this.buscar(nomeCompleto, dataNascimento);
     this.subscription = this.arcanoService
       .getAsObservable()
       .subscribe((data) => this.buscar(data.nomeCompleto, data.dataNascimento));

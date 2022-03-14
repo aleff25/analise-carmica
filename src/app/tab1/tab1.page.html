@@ -22,24 +22,17 @@
             >
             </ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label>Data de nascimento</ion-label>
-            <ion-input
-              value="{{ dataNascimento | date: 'dd/MM/yyyy' }}"
-              id="date"
-              class="ion-text-end"
-            ></ion-input>
-            <ion-popover trigger="date" size="cover">
-              <ng-template>
-                <ion-datetime
-                  presentation="date"
-                  [(ngModel)]="dataNascimento"
-                  locale="pt-Br"
-                ></ion-datetime>
-              </ng-template>
-            </ion-popover>
-          </ion-item>
         </ion-list>
+        <div style="padding-left: 16px;">
+          <h6>Data de nascimento</h6>
+          <ion-datetime
+            presentation="date"
+            [(ngModel)]="dataNascimento"
+            locale="pt-Br"
+          >
+            <div slot="title">Selecione a data de nascimento</div>
+          </ion-datetime>
+        </div>
 
         <ion-button
           expand="full"
