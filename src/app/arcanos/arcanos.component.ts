@@ -7,7 +7,7 @@ import { ArcanosModalComponent } from './arcanos-modal';
 
 import { json } from '../../../db.js';
 import { buscarArcanos, buscarNumerolgiaNome, buscarNumerologiaDataNascimento } from '../shared/utils/buscar-arcano';
-import { buscarCicloCosmico } from '../shared/utils/buscar-ciclo-cosimico';
+import { buscarCicloCosmico, encontrarCicloSazonal } from '../shared/utils/buscar-ciclo-cosimico';
 import { parse } from 'date-fns';
 import { Subscription } from 'rxjs';
 import { ArcanoService } from './arcano.service';
@@ -85,10 +85,7 @@ export class ArcanosComponent implements OnInit {
     const [numDia, numMes, numAno] = buscarNumerologiaDataNascimento(dataNascimento);
 
     let numDataNascimento = numDia + numMes + numAno;
-    if (numDataNascimento > 9) {
-      const totalStr = numDataNascimento.toString();
-      numDataNascimento = Number(totalStr.charAt(0)) + Number(totalStr.charAt(1));
-    }
+    numDataNascimento = encontrarCicloSazonal(numDataNascimento);
 
     this.cicloCosmico = buscarCicloCosmico(data, numDataNascimento);
   }

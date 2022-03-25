@@ -30,24 +30,18 @@ function encontrarEstacao(data, cicloSazonal, contador) {
 }
 
 export function buscarEstacao(data, cicloSazonal) {
-  let contador = 1;
-  for (let index = 1; index <= cicloSazonal; index++) {
-    if(contador <= 4) {
-      contador++;
-    } else {
-      contador = 1;
-    }
-  }
+  const [estacaoAtual, proximaEstacao, valor] = encontrarEstacao(data, cicloSazonal, 1);
 
-  const [estacaoAtual, proximaEstacao, valor] = encontrarEstacao(data, cicloSazonal, contador);
+  const valorAtt = valor === 0 ? 1 : valor;
 
-  return [estacaoAtual, proximaEstacao, estacoes.find(e => e.valor === valor)];
+  return [estacaoAtual, proximaEstacao, estacoes.find(e => e.valor === valorAtt)];
 }
 
 export function buscarCicloCosmico(dataNascimento: Date, numerologiaData: number) {
   const idade = differenceInYears(new Date(), dataNascimento);
   const cicloSazonal = numerologiaData;
-  const cicloAtual = Math.ceil(idade / ((cicloSazonal * 4) + 1));
+  const qtdCiclos =  Math.floor(idade / (cicloSazonal * 4));
+  const cicloAtual = qtdCiclos + 1;
 
   const [dataEstacaoAtual, dataProximaEstacao, estacao] = buscarEstacao(dataNascimento, cicloSazonal);
 
@@ -58,7 +52,7 @@ export function buscarCicloCosmico(dataNascimento: Date, numerologiaData: number
     idade,
     cicloSazonal,
     cicloCosmico: cicloSazonal * 4,
-    qtdCiclos: Math.floor(idade / (cicloSazonal * 4)),
+    qtdCiclos,
     cicloAtual,
     estacaoAtual: estacao.nome,
     dataInicialEstacao: dataEstacaoAtual,
@@ -66,4 +60,17 @@ export function buscarCicloCosmico(dataNascimento: Date, numerologiaData: number
     proximaEstacao: proximaEstacao.nome,
     dataInicioProximaEstacao: dataProximaEstacao,
   };
+}
+
+export function encontrarCicloSazonal(numDataNascimento: number) {
+
+  let ciclo = 0;
+
+  if (numDataNascimento > 9) {
+    const totalStr = numDataNascimento.toString();
+    ciclo = Number(totalStr.charAt(0)) + Number(totalStr.charAt(1));
+  }
+  return ciclo <= 9
+    ? ciclo
+    : encontrarCicloSazonal(ciclo);
 }

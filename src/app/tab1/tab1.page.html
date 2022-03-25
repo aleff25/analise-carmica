@@ -22,18 +22,17 @@
             >
             </ion-input>
           </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Data nascimento</ion-label>
+            <ion-input
+              clearInput
+              [(ngModel)]="dataNascimento"
+              type="date"
+              placeholder="Digite a data de nascimento."
+            >
+            </ion-input>
+          </ion-item>
         </ion-list>
-        <div style="padding-left: 16px;">
-          <h6>Data de nascimento</h6>
-          <ion-datetime
-            presentation="date"
-            [(ngModel)]="dataNascimento"
-            locale="pt-Br"
-          >
-            <div slot="title">Selecione a data de nascimento</div>
-          </ion-datetime>
-        </div>
-
         <ion-button
           expand="full"
           (click)="buscar()"
