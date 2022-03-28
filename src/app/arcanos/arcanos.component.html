@@ -80,7 +80,7 @@
     </ion-row>
     <ion-row class="ion-justify-content-center">
       <ion-col>
-        <ion-button color="secondary">
+        <ion-button (click)="presentModal(arcanos.mental)" color="secondary">
           <div>
             <label>{{ arcanos.mental }}</label>
             <br>
@@ -102,7 +102,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button  color="secondary">
+        <ion-button (click)="presentModal(arcanos.emocional)" color="secondary">
           <div>
             <label>{{ arcanos.emocional }}</label>
             <br>
@@ -114,7 +114,7 @@
         <ion-button color="medium">{{ arcanos.emocional + arcanos.espiritual }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button  color="secondary">
+        <ion-button (click)="presentModal(arcanos.espiritual)" color="secondary">
           <div>
             <label>{{ arcanos.espiritual }}</label>
             <br>
@@ -126,7 +126,7 @@
         <ion-button color="medium">{{ arcanos.racional + arcanos.espiritual }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button  color="secondary">
+        <ion-button (click)="presentModal(arcanos.racional)" color="secondary">
           <div>
             <label>{{ arcanos.racional }}</label>
             <br>
@@ -148,7 +148,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button  color="secondary">
+        <ion-button (click)="presentModal(arcanos.tridimensional)" color="secondary">
           <div>
             <label>{{ arcanos.tridimensional }}</label>
             <br>
@@ -170,7 +170,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button  color="secondary">
+        <ion-button (click)="presentModal(arcanos.transpessoal)" color="secondary">
           <div>
             <label>{{ arcanos.transpessoal }}</label>
             <br>
