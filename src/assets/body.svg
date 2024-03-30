@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
   <defs>
     <style>
       .cls-1 {
@@ -144,8 +144,8 @@
     <path id="silhouette" class="cls-7" d="M512,541.93c4.67,.22,10.67,2.69,9.89,31.02s19.48,93.38,22.51,104.69c3.02,11.31,3.81,20.49-4.03,41.54s-4.37,35.49,.56,49.04c4.93,13.55,7.95,41.77,8.51,67.29s-2.02,46.58-6.16,55.31-.34,14.22,2.13,19.93c1.28,2.97,2.62,6.44,2.66,8.86,.05,2.96,1.2,7.03,2.16,9.83,3.37,9.92,6.17,13.21,8.33,23.12,2.26,10.36,9.63,9.37,10.46,1.88,.07-.64,.91-.83,1.27-.3,2.02,2.93,4.42,2.98,7.47-.92,.33-.43,.98-.46,1.3-.02,2.15,2.88,6.01,3.98,7.11-.3,.19-.76,1.02-1.21,1.76-.97,2.38,.77,4.37-.81,4.94-2.11,.31-.7,1.14-.99,1.8-.6,1.29,.77,2.89,1.39,3.51-.98,.98-3.76-3.37-9.33-7.51-13.48s-9.08-14.76-9.08-14.76c-6.81-11.24-6.62-24.95-8.04-67.86s16.79-80.13,18.84-101.82c2.06-21.69-5.23-35.31-3.64-41.49s4.28-24.86,1.9-33.41,8.39-32.3,11.4-84.4-16.31-104.67-18.21-127.79,.16-42.6-5.23-63.02c-5.38-20.43,5.86-36.1,1.27-56.85s15.52-41.17,18.21-52.1,10.61-18.69,25.81-12.83c15.2,5.86,17.26,.32,43.86,11.56,26.6,11.24,38.16,10.29,61.28,19.16,23.12,8.87,52.41,9.03,65.4,14.09s15.68,8.55,18.84,12.98,5.54,5.54,11.24,8.23,5.07,6.65,9.66,12.19c4.59,5.54,10.45,6.81,13.14,6.65s2.38-3.01,.32-10.29,7.44-1.11,19,8.87c11.56,9.98,7.13,3.96,18.69,12.98,11.56,9.03,9.18-2.69,12.19,.63,3.01,3.33,7.76,9.34,13.62,7.44s-5.07-11.88-7.76-15.2-17.89-15.99-19.48-18.21-10.93-15.04-23.75-19.79-25.18-11.24-32.78-17.58-21.22-8.71-28.03-13.93-24.39-17.89-50.04-28.34-42.44-3.48-54.16-10.13c-11.72-6.65-21.85-6.02-41.33-22.33-19.48-16.31-42.91-28.03-61.44-24.23s-19.48-6.81-32.23-9.03-19.24-8.55-20.82-13.46-.63-10.13,3.01-15.68,4.12-21.69,5.23-21.85-.63,6.97,2.69,5.86,3.17-9.66,7.92-19.48,0-16.31-4.43-13.93-4.12-9.18-4.75-15.36-.32-35-36.99-35-36.36,28.82-36.99,35-.32,17.74-4.75,15.36-9.18,4.12-4.43,13.93,4.59,18.37,7.92,19.48,1.58-6.02,2.69-5.86,1.58,16.31,5.23,21.85,4.59,10.77,3.01,15.68-8.07,11.24-20.82,13.46-13.7,12.83-32.23,9.03-41.96,7.92-61.44,24.23c-19.48,16.31-29.61,15.68-41.33,22.33s-28.5-.32-54.16,10.13-43.23,23.12-50.04,28.34-20.43,7.6-28.03,13.93-19.95,12.83-32.78,17.58-22.17,17.58-23.75,19.79-16.79,14.88-19.48,18.21-13.62,13.3-7.76,15.2,10.61-4.12,13.62-7.44,.63,8.39,12.19-.63c11.56-9.03,7.13-3.01,18.69-12.98s21.06-16.15,19-8.87-2.38,10.13,.32,10.29,8.55-1.11,13.14-6.65c4.59-5.54,3.96-9.5,9.66-12.19s8.08-3.8,11.24-8.23,5.86-7.92,18.84-12.98,42.28-5.23,65.4-14.09c23.12-8.87,34.68-7.92,61.28-19.16,26.6-11.24,28.66-5.7,43.86-11.56,15.2-5.86,23.12,1.9,25.81,12.83s22.8,31.35,18.21,52.1,6.65,36.42,1.27,56.85c-5.38,20.43-3.33,39.9-5.23,63.02s-21.22,75.69-18.21,127.79,13.78,75.85,11.4,84.4,.32,27.24,1.9,33.41c1.58,6.18-5.7,19.79-3.64,41.49,2.06,21.69,20.27,58.91,18.84,101.82s-1.23,56.62-8.04,67.86c0,0-4.93,10.61-9.08,14.76s-8.5,9.72-7.51,13.48c.62,2.37,2.22,1.75,3.51,.98,.66-.39,1.49-.1,1.8,.6,.57,1.29,2.56,2.87,4.94,2.11,.74-.24,1.56,.22,1.76,.97,1.1,4.28,4.95,3.19,7.11,.3,.32-.43,.97-.4,1.3,.02,3.05,3.91,5.44,3.86,7.47,.92,.37-.53,1.2-.34,1.27,.3,.83,7.49,8.19,8.48,10.46-1.88,2.17-9.91,4.97-13.2,8.33-23.12,.95-2.8,2.1-6.88,2.16-9.83,.04-2.42,1.38-5.88,2.66-8.86,2.46-5.71,6.27-11.2,2.13-19.93s-6.72-29.78-6.16-55.31,3.58-53.75,8.51-67.29c4.93-13.55,8.4-27.99,.56-49.04s-7.05-30.23-4.03-41.54c3.02-11.31,23.29-76.36,22.51-104.69s5.22-30.79,9.89-31.02Z"/>
   </g>
   <g id="circles">
-    <ellipse id="cRight_Hand" class="cls-8" cx="182" cy="360" rx="55" ry="50"/>
-    <ellipse id="cLeft_Hand" class="cls-6" cx="842" cy="360" rx="55" ry="50"/>
+    <ellipse id="emocional" class="cls-8" cx="182" cy="360" rx="55" ry="50"/>
+    <ellipse id="racional" class="cls-6" cx="842" cy="360" rx="55" ry="50"/>
     <ellipse id="cRight_Leg" class="cls-3" cx="345" cy="675" rx="44" ry="35"/>
     <ellipse id="CRight_Hip" class="cls-2" cx="345" cy="507" rx="44" ry="35"/>
     <ellipse id="cRight_Body" class="cls-17" cx="345" cy="370" rx="44" ry="35"/>
@@ -154,20 +154,20 @@
     <ellipse id="cLeft_Hip" class="cls-13" cx="679" cy="507.5" rx="44" ry="35"/>
     <ellipse id="cLeft_Body" class="cls-12" cx="679" cy="370.5" rx="44" ry="35"/>
     <ellipse id="cLeft_Arm" class="cls-15" cx="679" cy="210.5" rx="44" ry="35"/>
-    <ellipse id="cCenter_Body" class="cls-4" cx="512" cy="368" rx="55" ry="50"/>
-    <ellipse id="cCenter_Feet" class="cls-9" cx="512" cy="900" rx="55" ry="50"/>
+    <ellipse id="espiritual" class="cls-4" cx="512" cy="368" rx="55" ry="50"/>
+    <ellipse id="transpessoal" class="cls-9" cx="512" cy="900" rx="55" ry="50"/>
     <ellipse id="cCenter_Leg" class="cls-18" cx="512" cy="760" rx="44" ry="35"/>
-    <ellipse id="cCenter_Thighs" class="cls-16" cx="512" cy="620" rx="55" ry="50"/>
+    <ellipse id="tridimensional" class="cls-16" cx="512" cy="620" rx="55" ry="50"/>
     <ellipse id="cCenter_Hip" class="cls-5" cx="512" cy="488" rx="44" ry="35"/>
     <ellipse id="cCenter_Chest" class="cls-11" cx="512" cy="246" rx="44" ry="35"/>
-    <ellipse id="cCenter_Head" class="cls-10" cx="512" cy="110" rx="55" ry="50"/>
+    <ellipse id="mental" class="cls-10" cx="512" cy="110" rx="55" ry="50"/>
   </g>
   <g id="texts">
     <g id="tRight_Hand">
-      <text class="cls-21" transform="translate(137.61 369.87) scale(1 1.2)"><tspan x="35" y="0">TEXTEXT17</tspan></text>
+      <text class="cls-21" transform="translate(137.61 369.87) scale(1 1.2)"><tspan x="35" y="0" id="emocional">TEXTEXT17</tspan></text>
     </g>
     <g id="tLeft_Hand">
-      <text class="cls-21" transform="translate(797.61 369.87) scale(1 1.2)"><tspan x="35" y="0">TEXTEXT16</tspan></text>
+      <text class="cls-21" transform="translate(797.61 369.87) scale(1 1.2)"><tspan x="35" y="0" id="racional">TEXTEXT16</tspan></text>
     </g>
     <g id="tRight_Leg">
       <text class="cls-20" transform="translate(308.67 682.8) scale(1 1.2)"><tspan x="20" y="0">TEXTEXT15</tspan></text>
@@ -194,25 +194,25 @@
       <text class="cls-20" transform="translate(642.67 218.8) scale(1 1.2)"><tspan x="20" y="0">TEXTEXT8</tspan></text>
     </g>
     <g id="tCenter_Feet">
-      <text class="cls-21" transform="translate(467.61 908.87) scale(1 1.2)"><tspan x="35" y="0">TEXTEXT7</tspan></text>
+      <text class="cls-21" transform="translate(467.61 908.87) scale(1 1.2)"><tspan x="35" y="0" id="transpessoal">TEXTEXT7</tspan></text>
     </g>
     <g id="tCenter_Leg">
       <text class="cls-20" transform="translate(475.68 768.8) scale(1 1.2)"><tspan x="20" y="0">TEXTEXT6</tspan></text>
     </g>
     <g id="tCenter_Thighs">
-      <text class="cls-21" transform="translate(467.61 628.87) scale(1 1.2)"><tspan x="35" y="0">TEXTEXT5</tspan></text>
+      <text class="cls-21" transform="translate(467.61 628.87) scale(1 1.2)"><tspan x="35" y="0" id="tridimensional">TEXTEXT5</tspan></text>
     </g>
     <g id="tCenter_Hip">
       <text class="cls-20" transform="translate(475.68 495.8) scale(1 1.2)"><tspan x="20" y="0">TEXTEXT4</tspan></text>
     </g>
     <g id="tCenter_Body">
-      <text class="cls-21" transform="translate(467.61 376.87) scale(1 1.2)"><tspan x="35" y="0">TEXTEXT3</tspan></text>
+      <text class="cls-21" transform="translate(467.61 376.87) scale(1 1.2)"><tspan x="35" y="0" id="espiritual">TEXTEXT3</tspan></text>
     </g>
     <g id="tCenter_Chest">
       <text class="cls-20" transform="translate(475.68 253.8) scale(1 1.2)"><tspan x="20" y="0">TEXTEXT2</tspan></text>
     </g>
     <g id="tCenter_Head">
-      <text class="cls-21" transform="translate(467.61 119.87) scale(1 1.2)"><tspan x="35" y="0">TEXTEXT1</tspan></text>
+      <text class="cls-21" transform="translate(467.61 119.87) scale(1 1.2)"><tspan x="35" y="0" id="mental">TEXTEXT1</tspan></text>
     </g>
   </g>
   <g id="arrows">

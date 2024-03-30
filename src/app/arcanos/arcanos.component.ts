@@ -1,5 +1,4 @@
 import { Component, ViewChild, OnInit, ElementRef, AfterViewChecked } from '@angular/core';
-import { Router } from '@angular/router';
 import { IonRouterOutlet } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 
@@ -12,7 +11,7 @@ import { parse } from 'date-fns';
 import { Subscription } from 'rxjs';
 import { ArcanoService } from './arcano.service';
 import { HttpClient } from '@angular/common/http';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 type Arcanos = {
   mental: number;
@@ -41,7 +40,7 @@ type CicloCosmico = {
   templateUrl: './arcanos.component.html',
   styleUrls: ['./arcanos.component.scss'],
 })
-export class ArcanosComponent implements OnInit, AfterViewChecked {
+export class ArcanosComponent implements OnInit {
 
   @ViewChild('bodyArcanos') bodyArcanos: ElementRef;
 
@@ -51,12 +50,13 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
   public arcanos: Arcanos;
   public cicloCosmico: CicloCosmico;
 
+  svgContent: SafeHtml;
+
   public nome = '';
   public dataNascimento = '';
   public analiseCarmica: number[] = [];
 
-  constructor(private router: Router,
-    private modalController: ModalController,
+  constructor(private modalController: ModalController,
     private arcanoService: ArcanoService,
     private http: HttpClient,
     private sanitizer: DomSanitizer,
@@ -74,11 +74,8 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
 
   }
 
-  ngAfterViewChecked(): void {
-    //
-  }
+  async presentModal(arcano: number) {
 
-  async presentModal(arcano) {
     const modal = await this.modalController.create({
       component: ArcanosModalComponent,
       componentProps: {
@@ -103,16 +100,15 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
         svgString = svgString.replace(new RegExp("\\b"+position+"\\b"), value.toString());
       });
 
-    // Codificar o SVG para Base64
-    //const encodedSvg = btoa(svgString);
-    const encodedSvg = encodeURIComponent(svgString);
-    this.bodyArcanos.nativeElement.style.background = `url('data:image/svg+xml;utf8,${encodedSvg}') no-repeat center/cover`;
+    this.svgContent = this.sanitizer.bypassSecurityTrustHtml(svgString);
+    // const encodedSvg = encodeURIComponent(svgString);
+    // this.bodyArcanos.nativeElement.style.background = `url('data:image/svg+xml;utf8,${encodedSvg}') no-repeat center/cover`;
   }
 
   private buscar(nomeCompleto: string, dataNascimento: any) {
-    this.nome = nomeCompleto?.trim();
+    // this.nome = nomeCompleto?.trim();
     this.analiseCarmica = buscarNumerolgiaNome(this.nome);
-    this.dataNascimento = dataNascimento;
+    // this.dataNascimento = dataNascimento;
     this.arcanos = buscarArcanos(this.dataNascimento);
     const data = parse(this.dataNascimento, 'dd/MM/yyyy', new Date());
     const [numDia, numMes, numAno] = buscarNumerologiaDataNascimento(this.dataNascimento);
@@ -121,5 +117,15 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
     numDataNascimento = encontrarCicloSazonal(numDataNascimento);
 
     this.cicloCosmico = buscarCicloCosmico(data, numDataNascimento);
+  }
+
+  onSvgClick(event: MouseEvent) {
+    const target = event.target as SVGElement; // Cast para SVGElement para acessar propriedades do SVG
+    console.log('Clicado:', target.id);
+
+    // Aqui você pode implementar sua lógica baseada no ID ou outra propriedade do elemento clicado
+    if (this.arcanos[target.id] !== undefined) {
+      this.presentModal(this.arcanos[target.id]);
+    }
   }
 }

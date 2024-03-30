@@ -82,7 +82,7 @@
 
     <ion-row>
       <ion-col size="auto">
-        <div #bodyArcanos class="body-background"></div>
+        <div [innerHtml]="svgContent" class="body-background" (click)="onSvgClick($event)"></div>
       </ion-col>
     </ion-row>
 
