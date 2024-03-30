@@ -78,106 +78,13 @@
         </ion-accordion-group>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
-      <ion-col>
-        <ion-button (click)="presentModal(arcanos.mental)" color="secondary">
-          <div>
-            <label>{{ arcanos.mental }}</label>
-            <br>
-            <label class="wrap-text">Mental</label>
-          </div>
-        </ion-button>
-      </ion-col>
-    </ion-row>
+
+
     <ion-row>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.mental + arcanos.emocional }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.mental + arcanos.espiritual }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.mental + arcanos.racional }}</ion-button>
+      <ion-col size="auto">
+        <div #bodyArcanos class="body-background"></div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="presentModal(arcanos.emocional)" color="secondary">
-          <div>
-            <label>{{ arcanos.emocional }}</label>
-            <br>
-            <label class="wrap-text">Emocional</label>
-          </div>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.emocional + arcanos.espiritual }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button (click)="presentModal(arcanos.espiritual)" color="secondary">
-          <div>
-            <label>{{ arcanos.espiritual }}</label>
-            <br>
-            <label class="wrap-text">Espiritual</label>
-          </div>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.racional + arcanos.espiritual }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button (click)="presentModal(arcanos.racional)" color="secondary">
-          <div>
-            <label>{{ arcanos.racional }}</label>
-            <br>
-            <label class="wrap-text">Racional</label>
-          </div>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.emocional + arcanos.tridimensional }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.tridimensional + arcanos.espiritual }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.tridimensional + arcanos.racional }}</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="presentModal(arcanos.tridimensional)" color="secondary">
-          <div>
-            <label>{{ arcanos.tridimensional }}</label>
-            <br>
-            <label class="wrap-text">Tridimensional</label>
-          </div>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.transpessoal + arcanos.emocional }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.transpessoal + arcanos.tridimensional }}</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button color="medium">{{ arcanos.transpessoal + arcanos.racional }}</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="presentModal(arcanos.transpessoal)" color="secondary">
-          <div>
-            <label>{{ arcanos.transpessoal }}</label>
-            <br>
-            <label class="wrap-text">Transpessoal</label>
-          </div>
-        </ion-button>
-      </ion-col>
-    </ion-row>
+
   </ion-grid>
 </ion-content>

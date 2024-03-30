@@ -1,5 +1,11 @@
 ion-col {
-  text-align: center;
+  position: relative; /* Faz com que o background absoluto se baseie neste container */
+  width: 100%;
+  height: 100vh; /* Ajuste conforme necessário */
+}
+ion-row, ion-col {
+  width: 100%;
+  height: 100%; /* Ou '100vh', dependendo do que você precisa */
 }
 
 ion-button {
@@ -11,4 +17,14 @@ ion-button {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 11.5px;
+}
+
+.body-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 55vh;
+  //background: url(/assets/body.svg) no-repeat center/cover;
+  z-index: -1; /* Garante que o background fique atrás do conteúdo */
 }

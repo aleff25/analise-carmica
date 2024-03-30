@@ -122,3 +122,81 @@ export function buscarArcanos(dataNascimento: string) {
     transpessoal
   };
 }
+
+type PosicaoArcano = {
+  value: number,
+  position: string
+}
+
+export function calcularArcanosEPosicoes(arcanos: any): PosicaoArcano[] {
+  return [
+    {
+      value: arcanos.mental,
+      position: 'TEXTEXT1'
+    },
+    {
+      value: arcanos.mental + arcanos.emocional,
+      position: 'TEXTEXT12'
+    },
+    {
+      value: arcanos.mental + arcanos.espiritual,
+      position: 'TEXTEXT2'
+    },
+    {
+      value: arcanos.mental + arcanos.racional,
+      position: 'TEXTEXT8'
+    },
+    {
+      value: arcanos.emocional,
+      position: 'TEXTEXT17'
+    },
+    {
+      value: arcanos.emocional + arcanos.espiritual,
+      position: 'TEXTEXT13'
+    },
+    {
+      value: arcanos.espiritual,
+      position: 'TEXTEXT3'
+    },
+    {
+      value: arcanos.racional + arcanos.espiritual,
+      position: 'TEXTEXT9'
+    },
+    {
+      value: arcanos.racional,
+      position: 'TEXTEXT16'
+    },
+    {
+      value: arcanos.emocional + arcanos.tridimensional,
+      position: 'TEXTEXT14'
+    },
+    {
+      value: arcanos.tridimensional + arcanos.espiritual,
+      position: 'TEXTEXT4'
+    },
+    {
+      value: arcanos.tridimensional + arcanos.racional,
+      position: 'TEXTEXT10'
+    },
+    {
+      value: arcanos.tridimensional,
+      position: 'TEXTEXT5'
+    },
+    {
+      value: arcanos.transpessoal + arcanos.emocional,
+      position: 'TEXTEXT15'
+    },
+    {
+      value: arcanos.transpessoal + arcanos.tridimensional,
+      position: 'TEXTEXT6'
+    },
+    {
+      value: arcanos.transpessoal + arcanos.racional,
+      position: 'TEXTEXT11'
+    },
+    {
+      value: arcanos.transpessoal,
+      position: 'TEXTEXT7'
+    }
+  ]
+}

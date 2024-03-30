@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { ArcanosRoutingModule } from './arcanos-routing.module';
 import { IonicModule } from '@ionic/angular';
 import { ArcanosModalComponent } from './arcanos-modal';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -16,6 +18,7 @@ import { ArcanosModalComponent } from './arcanos-modal';
     IonicModule,
     CommonModule,
     FormsModule,
+    HttpClientModule,
     ArcanosRoutingModule
   ],
 })
