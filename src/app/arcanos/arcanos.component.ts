@@ -51,8 +51,8 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
   public arcanos: Arcanos;
   public cicloCosmico: CicloCosmico;
 
-  public nome = 'Aleff Rodrigues';
-  public dataNascimento = '25/11/1994';
+  public nome = '';
+  public dataNascimento = '';
   public analiseCarmica: number[] = [];
 
   constructor(private router: Router,
@@ -71,7 +71,6 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
       .getAsObservable()
       .subscribe((data) => this.buscar(data.nomeCompleto, data.dataNascimento));
     this.carregarSVG();
-    // this.popularArcanos();
 
   }
 
@@ -111,9 +110,9 @@ export class ArcanosComponent implements OnInit, AfterViewChecked {
   }
 
   private buscar(nomeCompleto: string, dataNascimento: any) {
-    //this.nome = nomeCompleto?.trim();
+    this.nome = nomeCompleto?.trim();
     this.analiseCarmica = buscarNumerolgiaNome(this.nome);
-    //this.dataNascimento = dataNascimento;
+    this.dataNascimento = dataNascimento;
     this.arcanos = buscarArcanos(this.dataNascimento);
     const data = parse(this.dataNascimento, 'dd/MM/yyyy', new Date());
     const [numDia, numMes, numAno] = buscarNumerologiaDataNascimento(this.dataNascimento);
